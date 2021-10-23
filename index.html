@@ -70,13 +70,7 @@
                   auto-rotate ar>
       <div id="lazy-load-poster" slot="poster"></div>
   <div id="button-load" slot="poster">Load 3D Model</div>
-       <div class="controls">
-         <div>
-            Scale: X: <input id="x" value="1" size="3" class="number">,
-            Y: <input id="y" value="1" size="3" class="number">,
-            Z: <input id="z" value="1" size="3" class="number">
-         </div>
-      </div>
+     
     </model-viewer>
     <section class="attribution">
       <span>
@@ -97,24 +91,7 @@
       src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js">
   </script>
  
-  <script>
-    const x = document.querySelector('#x');
-const y = document.querySelector('#y');
-const z = document.querySelector('#z');
-    
-    const updateScale = () => {
-  modelViewerTransform.scale = `${x.value} ${y.value} ${z.value}`;
-};
-x.addEventListener('input', () => {
-  updateScale();
-});
-y.addEventListener('input', () => {
-  updateScale();
-});
-z.addEventListener('input', () => {
-  updateScale();
-});
-  </script>
+  
   <!-- Loads <model-viewer> for old browsers like IE11: -->
   <script nomodule
       src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js">
